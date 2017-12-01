@@ -227,7 +227,7 @@ var car = {
 	uploadDL: function(req, res, next)
 	{
 	     var transporter = nodemailer.createTransport({
-		    host: 'www.kizusismartexlimited.co.ke',
+		    host: 'kizusismartexlimited',
 		    port: 465,
 		    secure: true, // secure:true for port 465, secure:false for port 587
 		    auth: {
