@@ -1,0 +1,54 @@
+<nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+		<div class="navbar-header">
+		      <a class="navbar-brand" ui-sref="#"><img src="assets/LOGO.png" height="60" width="60"></a>
+		 </div>
+		   <ul class="nav navbar-nav pull-right">
+		      <li ><a ui-sref="admin">Dashboard</a></li>
+		      <li class="active"><a ui-sref="adminreserve">Reservations</a></li>
+		      <li><a ui-sref="car">Cars</a></li>
+		    </ul>
+	</div>
+ </nav>
+ 
+<div class="container">
+	<div class="row">
+		<div class="text-left">
+			<h2>Reservations</h2>
+			<div class="">
+        <button class="btn btn-primary btn-md" ng-click="create()">Create Reservation</button>
+		</div>
+		</div>
+		<hr>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	 <div class="col-md-8">
+		<ul class="list-group" ng-repeat="reserve in reservations  | filter: paginate ">
+		 <li class="list-group-item">
+		 	<p>Client: <b> {{reserve.client_name }} </b></p>
+			<p>Car Reserved:  <b>{{reserve.vehicle }} </b></p>
+			<p>{{reserve.rent_start | date:'fullDate'}} to {{reserve.rent_end | date:'fullDate'}}</p>
+			<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More</button>
+			<button class="btn btn-md btn-danger" ng-click="del(reserve._id)">Delete</button>
+			<button class="btn btn-md btn-success" ng-click="edit(reserve)">Edit</button>
+			<button class="btn btn-md btn-warning" ng-click="return(reserve)">Return</button>
+			<div uib-collapse="isCollapsed">
+		<div class="text-left">
+		   <p>Phone: <b>{{reserve.client_phone }}</b></p>
+			 <p>Email: <b>{{reserve.client_email }}</b></p>
+			 <p>Amount Paid: <b>{{reserve.total }} </b></p>
+		</div>
+	</div>
+		</li>
+		</ul>
+		<ul uib-pagination total-items="totalItems" 
+       max-size="5" boundary-links="true" ng-model="currentPage"
+          items-per-page="numPerPage">
+        </ul>
+		</div>
+	</div>
+</div>
+

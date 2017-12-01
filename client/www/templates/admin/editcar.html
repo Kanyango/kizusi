@@ -1,0 +1,55 @@
+
+<div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title">Car Edit View</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+				<div class="form-group">
+					<label class="control-label">Model</label>
+					<input type="text" class="form-control" name="cname" ng-model="car.model">
+				</div>
+				<div class="form-group">
+					<label class="control-label">Plate No.</label>
+					<input type="tel" class="form-control" name="dl" ng-model="car.plate_no">
+				</div>
+				<div class="form-group">
+					<label class="control-label">Status</label>
+					<input type="tel" class="form-control" name="phone" ng-model="car.status">
+				</div>
+				<div class="form-group">
+					<label class="control-label">Capacity</label>
+					<input  class="form-control" name="mail" ng-model="car.capacity">
+				</div>
+          
+          			<div class="form-group">
+					<label class="control-label">Fuel</label>
+					<input  class="form-control" name="mail" ng-model="car.fuel">
+				</div>
+          
+         			 <div class="form-group">
+					<label class="control-label">Drive</label>
+					<input  class="form-control" name="mail" ng-model="car.drive">
+				</div>
+			
+				<div class="form-group">
+					<label class="control-label">Steering</label>
+					<input  class="form-control" name="steer" ng-model="car.steer">
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label">Engine</label>
+					<input  class="form-control" name="eng" ng-model="car.eng">
+				</div>
+				
+          
+          
+		  
+			<button class="btn btn-md btn-success" ng-click="update(car); ok()">update</button>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
+ </div>
+ </div>

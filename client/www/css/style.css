@@ -1,0 +1,178 @@
+body
+{
+	font-family:  "Open Sans";
+}
+hr
+{
+ size: 10px;
+ font-weight: bold;
+}
+.navbar-inverse
+{
+	background-color: #0000cc;
+}
+.form-control
+{
+	border-radius: 30px !important;
+}
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus 
+{
+	color: #fff;
+
+}
+
+.navbar-inverse .navbar-nav > li > a:active 
+{
+	background-color: #fff;	
+}
+.navbar-inverse .navbar-nav .active > a 
+{
+	background-color: #d9d9d9;	
+}
+.navbar-header .navbar-brand
+{
+	
+
+}
+#j_text
+{
+	margin-top: 15%;
+    color: #fff;
+	font-size: 72px;
+	font-weight: bolder;
+	font-style: normal;
+	letter-spacing: 2px;
+}
+#jtron
+{
+	background-image: url("../assets/prado_int.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    height: 550px;
+}
+.jumbotron
+{
+	background-image: url("../assets/prado_int.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	font-size: 56px;
+	font-weight: bolder;
+}
+.ui-bootstrap-carousel {
+  width:400px;
+  height:200px;
+  margin-left:20px;
+}
+.ui-bootstrap-carousel img {
+  width:400px;
+}
+/* angular-carousel Demo */
+.angular-carousel {
+  width:400px;
+  height:200px;
+  margin-left:20px;
+}
+.navbar {
+	height: 110px;
+        }
+
+.nav 
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 16px;
+}
+#reserve
+{
+	color: #000;
+	font-weight: bold;
+	background-color: #FFD700;
+}
+#rev_text
+{
+	padding: 5px;
+}
+.moto
+{
+	padding: 40px;
+	background-color: #8c8c8c;
+	color: #e6e6e6;
+	letter-spacing: 10px;
+	font-weight: bold;
+	font-size: 56px;
+}
+#rentForm
+{
+	border-style: solid;
+	border-width: 5px;
+	border-color: #737373;
+	min-height: 50%;
+}
+
+#veh_head
+{
+	font-weight: bold;
+}
+form
+{
+	padding: 10px;
+}
+#carname
+{
+	background-color: #0000cc;
+	padding: 15px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+#info
+{	
+	font-size: 16px;
+}
+#inn
+{
+	padding-left: 20px;
+}
+#details
+{
+	border-radius: 0px;
+	width: 30%;
+	font-size: 16px;
+	background-color: #737373;
+	border-color: #737373;
+}
+#pol_heads
+{
+	text-decoration: underline;
+}
+#policy p
+{
+	font-size: 14px;
+}
+#footer
+{
+	color: #fff;
+	background-color: #0000cc;
+}
+#footer  h3
+{
+	text-decoration: underline;
+}
+#foot_row
+{
+	padding: 30px;
+}
+#foot_cont
+{
+	padding: 20px;
+}
+
+

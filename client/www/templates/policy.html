@@ -1,0 +1,49 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+		  	   	<div class="row" id="reserve">
+   		<p id="rev_text">For Reservations Call Us On: +254716281045, 0726390101, 0726591218</p>
+   	</div>
+		  	
+		    <div class="navbar-header">
+		      <a class="navbar-brand" ui-sref="#"><img src="assets/LOGO.png" height="80" width="80"></a>
+		    </div>
+		    <ul class="nav navbar-nav pull-right">
+		      <li><a ui-sref="home">HOME</a></li>
+		      <li ui-sref="services"><a>OTHER SERVICES</a></li>
+		      <li class="active"><a ui-sref="policy">RENTAL POLICIES</a></li>
+		      <li><a ui-sref="contact">CONTACTS</a></li>
+		    </ul>
+		  </div>
+       </nav>
+<br>
+<br>
+<br>
+<br>
+<div class="jumbotron">
+	<div class="text-center">
+		<h1>Our Policy</h1>
+	</div>
+</div>
+<br>
+<div class="container" id="policy"> 
+	<div class="row">
+		<div ng-repeat="term in terms track by $index">
+		<p class="text-left">{{ term.no }}. {{ term.par }} </p>
+		<p id="inn" ng-repeat="cond in term.conds">
+			{{cond.cond_id}}. {{ cond.cond_par}}
+		</p>
+	</div>
+</div>
+<div class="row">
+	<h4 class="text-left" id="pol_heads">IMPORTANT</h4>
+	<div ng-repeat="imp in important track by $index">
+		<p class="text-left">{{ imp.imp_id }}. {{ imp.imp_par }} </p>
+	</div>
+</div>
+<div class="row">
+	<h4 class="text-left" id="pol_heads">PAYMENT TERMS</h4>
+	<div ng-repeat="pay in pay_terms track by $index">
+		<p class="text-left">{{ pay.pay_id }}. {{ pay.pay_par }} </p>
+	</div>
+</div>
+</div>

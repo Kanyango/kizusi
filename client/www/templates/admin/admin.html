@@ -1,0 +1,89 @@
+<nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+		<div class="navbar-header">
+		      <a class="navbar-brand" ui-sref="#"><img src="assets/LOGO.png" height="60" width="60"></a>
+		 </div>
+		   <ul class="nav navbar-nav pull-right">
+		      <li class="active"><a ui-sref="admin">Dashboard</a></li>
+		      <li><a ui-sref="adminreserve">Reservations</a></li>
+		      <li><a ui-sref="car">Cars</a></li>
+		    </ul>
+	</div>
+ </nav>
+<hr>
+
+
+ <div class="container">
+ 	<div class="row">
+ 		<div class="pull-left">
+ 			<h2> Admin Panel </h2>
+ 			<div class="user">
+      <h3 ng-show="isLoggedIn()">{{ currentUser() }}</h3>
+      </div>
+      </div>
+      <div class="pull-right">
+      	<div style="padding-top: 20px">
+         <button ng-show="isLoggedIn()" class="btn btn-danger btn-md" ng-click="logOut()">Sign Out</button>
+     </div>
+        </div>
+ 	</div>
+ </div>
+ <hr>
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-md-6">
+ 			<div class="panel panel-default">
+ 				 <div class="panel-heading">
+ 				 	<h4 class="text-center">RESERVED CARS</h4>
+ 				 </div>
+ 				 <div class="panel-body text-center">
+ 				 	<div class="text-center" ng-show="reserved == ''">
+ 				 		<h2>No Reserved Cars</h2>
+ 				 	</div>
+ 				 	<div ng-repeat="car in reserved">
+ 				 	<p>{{ car.model }}</p>
+ 				 	<p>{{ car.plate }}</p>
+ 				 </div>
+ 				 </div>
+ 				 <div class="panel-footer">
+ 				 	<h3 class="text-center">Cars Reserved {{ total }}</h3>
+ 				 </div>
+ 			</div>
+ 		</div>
+ 		<div class="col-md-6">
+ 			<div class="panel panel-default">
+ 				 <div class="panel-heading">
+ 				 	<h4 class="text-center">Available Cars</h4>
+ 				 </div>
+ 				 <div class="panel-body">
+ 				 <div class="text-center" ng-show="available == ''">
+ 				 		<h2>No Available Car</h2>
+ 				 	</div>
+ 				 	<div class="text-left" ng-repeat="car in available">
+ 				 	<p>{{ car.model }}</p>
+ 				 	<p>{{ car.plate }}</p>
+ 				 </div>
+ 				</div>
+ 				 <div class="panel-footer">
+ 				 	<h3 class="text-center">Available Cars {{ totalav }}</h3>
+ 				 </div>
+ 			</div>
+ 		</div>
+ 		<!-- <div class="col-md-4">
+ 			<div class="panel panel-default">
+ 				 <div class="panel-heading">
+ 				 	<h4 class="text-center">Customers</h4>
+ 				 </div>
+ 				 <div class="panel-body text-center">
+ 				 	<p>View Customers</p>
+ 				 </div>
+ 				 <br>
+ 				 <br>
+ 				 <br>
+ 				 <div class="panel-footer">
+ 				 	<h3 class="text-center">Total: 15 Customers</h3>
+ 				 </div>
+ 			</div>
+ 		</div> -->
+ 	</div>
+ </div>

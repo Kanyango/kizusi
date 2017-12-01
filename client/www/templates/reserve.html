@@ -1,0 +1,69 @@
+<div class="container">
+	
+      <div class="row">
+	      
+      	<div class="col-md-6">
+      	<img src="{{ car.photo }}" alt="{{ car.name }}" width="400" height="300">
+      	</div>
+	      
+      	<div class="col-md-6">
+        <form class="form-horizontal" name="myForm">
+          <div class="form-group">
+            <label class="control-label">Rental Start Date</label>
+            <p class="input-group">
+            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="car.start" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" name="rent_start"/>
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+          </p>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Rental Return Date</label>
+            <p class="input-group">
+            <input  class="form-control" uib-datepicker-popup="{{format}}" ng-model="car.end" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" name="rent_end"/>
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+          </p>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Pickup Location</label>
+            <input  class="form-control" ng-model="car.loc_pick" placeholder="Location" name="loc_pick">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Return Location</label>
+            <input class="form-control" ng-model="car.return" placeholder="Location" name="loc_return">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Phone </label>
+            <input  class="form-control" ng-model="car.phone" placeholder="Enter Phone i.e no +2547111111111 " name="phone" required>
+          </div>
+	<div class="form-group">
+            <label class="control-label">Driving Lisence No.</label>
+            <input  class="form-control" ng-model="car.dl" name="dl" required pattern=".{5,}">
+          </div>
+		<div class="form-group">
+            <label class="control-label">Naional ID no.</label>
+            <input  class="form-control" ng-model="car.nat_id" name="nat_id" required>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Model</label>
+            <input  class="form-control" ng-model="car.model" name="model" readonly>
+          </div>
+           <div class="form-group" hidden>
+            <label class="control-label">No Plate </label>
+            <input type="tel" class="form-control" ng-model="car.plate_no"  name="plate_no" readonly>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Email</label>
+            <input type="email" class="form-control" ng-model="car.email" placeholder="Enter your email" name="email" required>
+          </div>
+          <button class="btn btn-default btn-md  btn-success" ng-click="reserve()"
+		  ng-disabled="myForm.$invalid">Submit</button>
+        </form> 
+		
+       </div>
+    </div>    
+ </div>
+
+	

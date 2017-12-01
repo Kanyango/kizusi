@@ -1,0 +1,144 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container-fluid">
+   	   	<div class="row" id="reserve">
+   		<h2 style="color: #000; font-weight: bold">Kizusi smartex car rental services</h2>
+   	</div>
+		<div class="navbar-header">
+			<p id="rev_text" style="font-style: bold; color: #fff; font-size: 18px;">Call Us On: +254716281045, 0726390101</p>
+			
+		 </div>
+		   <ul class="nav navbar-nav pull-right">
+		     <li class="active"><a ui-sref="home">HOME</a></li>
+		     <li><a ui-sref="services">OTHER SERVICES</a></li>
+		     <li><a ui-sref="policy">RENTAL POLICIES</a></li>
+		     <li><a ui-sref="contact">CONTACTS</a></li>
+		   </ul>
+	</div>
+ </nav>
+<br>
+<br>
+<br>
+<br>
+<!--<div class="jumbotron" id="jtron">
+ <div id="bann"> 
+	<p id="j_text" class="text-center">Comfort & Luxury</p>
+</div>
+</div> -->
+<div style="height:400px;width:100%">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div uib-slide ng-repeat="slide in slides" index="$index">
+        <img src="{{slide.image}}" height="400">
+        <!--<div class="carousel-caption">
+          <h4>Slide {{slide.id}}</h4>
+          <p>{{slide.text}}</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<br>
+
+<div class="container">
+ <div class="row">
+  <div class="col-md-4">
+	  
+	  <div style="float: left;">
+	  	<img src="assets/LOGO.png" height="100" width="100"/> 
+	  </div>
+	 </div>
+	 
+	   <div class="col-md-4">
+          <div class="text-center">
+		<img src="assets/LOGO.png" height="100" width="100"/> 
+	  </div>
+	 </div>
+	 
+	  <div class="col-md-4" >
+		   <div style="float: right" > 
+	  	<img src="assets/LOGO.png" height="100" width="100"/> 
+	  </div>
+	  
+   </div>
+	 
+ </div>
+</div>
+
+<br>
+
+<div class="container">
+	<div class="row">
+		<div class="text-left">
+			<h2 id="veh_head">Our Vehicles</h2>
+		</div>
+		<hr>
+	</div>
+</div>
+
+<br>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4" ng-repeat="car in cars">
+	<img ng-src="{{car.photo}}" width="300" height="220" />
+			<div class="text-left">
+				<p id="carname">{{ car.model}}</p>
+			</div>
+			<div class="text-left" id="info">
+				<p>{{ car.about }}</p>
+			</div>
+     <button type="button" id="details" ng-click="view(car)" 
+                      class="btn btn-primary">DETAILS</button>
+     <p ng-show="car.status =='reserved'">OOps!! Already reserved try later</p>
+     <button ng-show="car.status =='available'" type="button" id="details" ng-click="reserve(car)" 
+                      class="btn btn-primary">RESERVE</button> 
+		</div>
+	</div>
+	<br />
+</div>
+<br />
+<br />
+<div class="container">
+	<h2 class="text-center">what our customers say about our services</h2>
+	<hr>
+  <div class="row">
+	 <div class="col-md-4">
+		 
+		 <h3><i>" Well maintained rides at pocket friendly prices , just what i need "</i></h3>
+		 <h4>Emmanuel Rajiv</h4>
+		 <h5>Agility - Transport Manager</h5>
+	</div>
+	   <div class="col-md-4">
+		 
+		 <h3><i>"Luxury delivered in style, perfect rides for business meetings , with KIZUSI i arrive in style"</i></h3>
+		 <h4>Kenneth Odinga Adangala</h4>
+		 <h5>Twin Construction Limited - C.E.O</h5>
+	</div>
+	<div class="col-md-4">
+		 
+		 <h3><i>"In the aviation industry time is of the essence , with KIZUSI iam always on time all the time"</i></h3>
+		 <h4>Joan Sidi</h4>
+		 <h5>Swissport - Lodge Co-ordinator</h5>
+	  </div>
+  </div>
+ <div class="row">
+	 <div class="col-md-4">
+		 
+		 <h3><i>"The outdoors have always been my thing away from the concrete jungle and explore the outskirts of Nairobi
+			 , with KIZUSI's 4*4 rides, i enjoy myself and my family to the max"</i></h3>
+		 <h4>Vida</h4>
+		 <h5>Director - Golden East School</h5>
+	</div>
+	   <div class="col-md-4">
+		 
+		   <h3><i>"Visiting upcountry on the weekends is never a hustle coz KIZUSI's got me covered"</i></h3>
+		 <h4>Samuel Mutama</h4>
+		 <h5>Transport Logistics - Director</h5>
+	</div>
+	<div class="col-md-4">
+		 
+		<h3><i>"Perfectly maintained cars , luxury finished interiors what more can i say"</i></h3>
+		 <h4>Henry Wanyama</h4>
+		 <h5>Qaizen Car Rental - Manager</h5>
+	  </div>
+  </div>
+</div>
