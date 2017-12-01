@@ -252,7 +252,7 @@ var car = {
 		    }
 		    console.log('Message %s sent: %s', info.messageId, info.response);
 		});
-	}
+	
 	},
 
 	upload: function(req, res, next)
