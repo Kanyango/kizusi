@@ -227,27 +227,32 @@ var car = {
 	uploadDL: function(req, res, next)
 	{
 	     var transporter = nodemailer.createTransport({
-		 service: 'gmail',
-		 auth: {
-			user: 'info@kizusismartexlimited.co.ke',
-			pass: '0726390101kibe'
+		    host: 'mail.kizusismartexlimited.co.ke',
+		    port: 465,
+		    secure: true, // secure:true for port 465, secure:false for port 587
+		    auth: {
+		        user: 'info@kizusismartexlimited.co.ke',
+		        pass: '0726390101kibe'
 		    }
 		});
-		
-		const mailOptions = {
-		  from: 'client@email.com', // sender address
-		  to: 'info@kizusismartexlimited.co.ke', // list of receivers
-		  subject: 'Subject of your email', // Subject line
-		  html: '<p>Your html here</p>'// plain text body
-		};
-		
-		transporter.sendMail(mailOptions, function (err, info) {
-		   if(err)
-		     console.log(err)
-		   else
-		     console.log(info);
-		});
 
+		// setup email data with unicode symbols
+		var mailOptions = {
+		    from: req.params.email, // sender address
+		    to: 'info@kizusismartexlimited.co.ke', // list of receivers
+		    subject: req.params.subject, // Subject line
+		    text: 'Query', // plain text body
+		    html: '<p>'+ req.params.message  +'</p>' // html body
+		};
+
+		// send mail with defined transport object
+		transporter.sendMail(mailOptions, (error, info) => {
+		    if (error) {
+		        return console.log(error);
+		    }
+		    console.log('Message %s sent: %s', info.messageId, info.response);
+		});
+	}
 	},
 
 	upload: function(req, res, next)
