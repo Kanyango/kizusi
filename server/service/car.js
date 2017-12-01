@@ -229,14 +229,14 @@ var car = {
 	     var transporter = nodemailer.createTransport({
 		 service: 'gmail',
 		 auth: {
-			user: 'youremail@address.com',
-			pass: 'yourpassword'
+			user: 'info@kizusismartexlimited.co.ke',
+			pass: '0726390101kibe'
 		    }
 		});
 		
 		const mailOptions = {
-		  from: 'sender@email.com', // sender address
-		  to: 'to@email.com', // list of receivers
+		  from: 'client@email.com', // sender address
+		  to: 'info@kizusismartexlimited.co.ke', // list of receivers
 		  subject: 'Subject of your email', // Subject line
 		  html: '<p>Your html here</p>'// plain text body
 		};
