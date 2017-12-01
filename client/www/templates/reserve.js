@@ -97,15 +97,15 @@ angular.module('kizusiApp.reserve', [])
   }
   
    $scope.reserve = function() 
-  {
-    /*$http.post('/ressms', $scope.car)
-    .then(function(res){
-      $scope.sms = res.data;
-    });
-   $scope.car = '' ;
-   $scope.confirm();*/
-   $state.go('uploadetails');
-  }
+    {
+      $http.post('/ressms', $scope.car)
+      .then(function(res){
+        $scope.sms = res.data;
+      });
+     $scope.car = '' ;
+     $scope.confirm();
+     $state.go('home');
+    }
    
    $scope.confirm = function()
    { 
