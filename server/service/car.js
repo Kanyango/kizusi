@@ -226,34 +226,26 @@ var car = {
 	},
 	uploadDL: function(req, res, next)
 	{
-	    //var id = mongoose.Types.ObjectId(req.params.id);
-
-		var storage = multer.diskStorage({
-	  		destination: function(request , file , callback)
-	  		{
-	  			callback(null , './client/www/uploads');
-	  		},
-	  		filename: function (request, file, callback) {
-		    callback(null, file.originalname);
-		  }
-	  	});
-
-		var upload = multer({ //multer settings
-                    storage: storage
-                }).single('file');
-
-		upload(req,res,function(err){
-			if(err){
-			         res.json({error_code:1,err_desc:err});
-				 return;
-				}
-
-				send({ // Overriding default parameters
-						  subject: 'attached '+ req.file.path,         // Override value set as default
-						  files: [ req.file.path ],
-						}, function (err, res) {
-						  console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
-						});
+	     var transporter = nodemailer.createTransport({
+		 service: 'gmail',
+		 auth: {
+			user: 'youremail@address.com',
+			pass: 'yourpassword'
+		    }
+		});
+		
+		const mailOptions = {
+		  from: 'sender@email.com', // sender address
+		  to: 'to@email.com', // list of receivers
+		  subject: 'Subject of your email', // Subject line
+		  html: '<p>Your html here</p>'// plain text body
+		};
+		
+		transporter.sendMail(mailOptions, function (err, info) {
+		   if(err)
+		     console.log(err)
+		   else
+		     console.log(info);
 		});
 
 	},
