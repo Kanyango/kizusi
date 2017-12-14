@@ -88,8 +88,10 @@
 			</div>
      <button type="button" id="details" ng-click="view(car)" 
                       class="btn btn-primary">DETAILS</button>
-     <p ng-show="car.status =='reserved'">OOps!! Already reserved try later</p>
-     <button ng-show="car.status =='available'" type="button" id="details" ng-click="reserve(car)" 
+     <!-- <p ng-show="car.status =='reserved'">OOps!! Already reserved try later</p>
+	 <button ng-show="car.status =='available'" type="button" id="details" ng-click="reserve(car)" 
+                      class="btn btn-primary">RESERVE</button> 	-->		
+     <button type="button" id="details" ng-click="reserve(car)" 
                       class="btn btn-primary">RESERVE</button> 
 		</div>
 	</div>
