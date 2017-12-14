@@ -13,7 +13,7 @@ angular.module('kizusiApp.reserve', [])
       {
         if($scope.car._id == $scope.cars[m].vehicle)
         {
-         console.log('Tuko ndani',$scope.cars[m]);
+         $scope.booked = $scope.cars[m];
           
         }
       }
