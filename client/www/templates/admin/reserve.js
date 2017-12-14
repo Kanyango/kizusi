@@ -1,7 +1,14 @@
 angular.module('kizusiApp.reserve', [])
 
 .controller('AdminReservationsController', function($scope, $http, $uibModal){
-
+	
+	    $http.get('/reserve')
+	  .then(function(res){
+	    $scope.reservations = res.data;
+	    $scope.totalItems = $scope.reservations.length;
+	    console.log($scope.reservations);
+	  });
+	
   //$scope.client = {};
   $scope.create = function()
         {
@@ -45,12 +52,7 @@ angular.module('kizusiApp.reserve', [])
     $http.delete('/reserve' + del);
   }
 
-    $http.get('reserve')
-  .then(function(res){
-    $scope.reservations = res.data;
-    $scope.totalItems = $scope.reservations.length;
-    console.log($scope.reservations);
-  });
+
 	  
     $scope.isNavCollapsed = true;
     $scope.isCollapsed = true;
