@@ -33,7 +33,7 @@ angular.module('kizusiApp.reserve', [])
 
   $scope.inlineOptions = {
     customClass: getDayClass,
-    minDate: new Date(),
+    minDate: $scope.today(),
     showWeeks: true
   };
 
