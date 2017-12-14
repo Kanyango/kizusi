@@ -7,11 +7,12 @@
       	</div>
 	      
       	<div class="col-md-6">
-		<div uib-alert type="danger">
-			<p>NOTE: The vehicle has been booked for the following days {{ booked.rent_start |date: 'fullDate' }}
-			to {{ booked.rent_end | date : 'fullDate' }}</p>
-		</div>
+		
         <form class="form-horizontal" name="myForm">
+		<div uib-alert class="danger">
+			<h3>NOTE: The vehicle has been booked for the following days {{ booked.rent_start |date: 'fullDate' }}
+			to {{ booked.rent_end | date : 'fullDate' }}</h3>
+		</div>
           <div class="form-group">
 		  
 	
