@@ -7,8 +7,14 @@
       	</div>
 	      
       	<div class="col-md-6">
+		<div uib-alert type="danger">
+			<p>NOTE: The vehicle has been booked for the following days {{ booked.rent_start |date: 'fullDate' }}
+			to {{ booked.rent_end | date : 'fullDate' }}</p>
+		</div>
         <form class="form-horizontal" name="myForm">
           <div class="form-group">
+		  
+	
             <label class="control-label">Rental Start Date</label>
             <p class="input-group">
             <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="car.start" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" name="rent_start"/>
