@@ -11,7 +11,7 @@ angular.module('kizusiApp.reserve', [])
 	    $scope.cars = res.data;
       for(var m =0; m < $scope.cars.length; m++)
       {
-        if($scope.car.plate_no == $scope.cars[m].vehicle)
+        if($scope.car._id == $scope.cars[m].vehicle)
         {
          console.log('Tuko ndani',$scope.cars[m]);
           
