@@ -5,10 +5,12 @@
       	<div class="col-md-6">
       	<img src="{{ car.photo }}" alt="{{ car.name }}" width="400" height="300">
 		<br>
-		<div uib-alert ng-class="'alert-danger'" ng-if="car.status == 'reserved'">
+		<div ng-if="car.status == 'reserved'">
+		<div uib-alert ng-class="'alert-danger'" >
 			NOTE: The vehicle has been booked for the following days {{ booked.rent_start |date: 'fullDate' }}
 			to {{ booked.rent_end | date : 'fullDate' }}
 		</div>
+		</div>	
       	</div>
 	      
       	<div class="col-md-6">
