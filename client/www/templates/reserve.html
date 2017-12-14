@@ -7,7 +7,7 @@
 		<br>
 		<div ng-if="car.status == 'reserved'">
 		<div uib-alert ng-class="'alert-danger'" >
-			NOTE: The vehicle has been booked for the following days {{ booked.rent_start |date: 'fullDate' }}
+			NOTE: The vehicle has been booked for the following days {{ booked.rent_start | date: 'fullDate' }}
 			to {{ booked.rent_end | date : 'fullDate' }}
 		</div>
 		</div>	
