@@ -3,7 +3,23 @@ angular.module('kizusiApp.reserve', [])
 
 .controller('ReserveController', function($scope, $http, $uibModal, $state){ 
   
-            $scope.car = $state.params.car;
+  $scope.car = $state.params.car;
+  
+  $http.get('/reserve')
+	  .then(function(res){
+	    $scope.cars = res.json()
+      for(var m =0; m < $scope.cars.length; m++)
+      {
+        if($scope.car._id == $scope.cars[m]._id)
+        {
+         console.log('Tuko ndani',$scope.cars[m]);
+          
+        }
+      }
+	  });
+  
+  
+  
   
   $scope.today = function() {
     $scope.dt = new Date();
