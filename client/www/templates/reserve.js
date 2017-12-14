@@ -4,7 +4,9 @@ angular.module('kizusiApp.reserve', [])
 .controller('ReserveController', function($scope, $http, $uibModal, $state){ 
   
   $scope.car = $state.params.car;
-  
+	
+  console.log($scope.car);
+	
   $http.get('/reserve')
 	  .then(function(res){
 	   console.log(res);
