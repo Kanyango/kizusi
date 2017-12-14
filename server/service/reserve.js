@@ -26,7 +26,7 @@ var reserve = {
 				{
 					return next(err);
 				}
-				req.app.db.models.Car.update({plate_no: req.body.car} , 
+				req.app.db.models.Car.update({ _id : mongoose.Types.ObjectId(req.body.car)} , 
 			    {status :'reserved'}, options,
 			function(err , cust){
 				if(err)
