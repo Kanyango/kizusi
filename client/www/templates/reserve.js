@@ -8,7 +8,7 @@ angular.module('kizusiApp.reserve', [])
   $http.get('/reserve')
 	  .then(function(res){
 	   console.log(res);
-	    $scope.cars = res;
+	    $scope.cars = res.data;
       for(var m =0; m < $scope.cars.length; m++)
       {
         if($scope.car._id == $scope.cars[m]._id)
