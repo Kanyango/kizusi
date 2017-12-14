@@ -40,13 +40,13 @@
           </p>
           </div>
           <div class="form-group">
-					<label class="control-label">Vehicle To Reserve</label>
-					<select ng-model="client.car"  class="form-control"
-	            ng-options="veh.plate_no as veh.model for veh in ava" 
+		<label class="control-label">Vehicle To Reserve</label>
+		<select ng-model="client.car"  class="form-control"
+	            ng-options="veh._id as veh.model for veh in ava" 
 	            name="car" >
-			    <option value="">Select Vehicle</option>
+			   <option value="">Select Vehicle</option>
 			    </select>
-				</div>
+	</div>
 		   <div class="form-group">
 					<label class="control-label">Total Paid</label>
 					<input type="tel" class="form-control" name="total" ng-model="client.total">
