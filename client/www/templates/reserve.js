@@ -5,7 +5,7 @@ angular.module('kizusiApp.reserve', [])
   
   $scope.car = $state.params.car;
   
-  $http.get('/reserve')
+  $http.get('/car')
 	  .then(function(res){
 	   console.log(res);
 	    $scope.cars = res.data;
