@@ -1,4 +1,4 @@
-angular.module('kizusiApp.reserve', [])
+angular.module('kizusiApp.adminreserve', [])
 
 .controller('AdminReservationsController', function($scope, $http, $uibModal){
 	
