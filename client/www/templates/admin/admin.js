@@ -1,5 +1,5 @@
 angular.module('kizusiApp.admin',
-              ['kizusiApp.reserve',
+              ['kizusiApp.adminreserve',
 	           'kizusiApp.car',
 	           'kizusiApp.newpass'
 	           ])
