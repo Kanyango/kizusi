@@ -95,6 +95,19 @@ var car = {
 				res.status(200).json(docs);
 			});
 	},
+	single_car : function(req , res , next)
+	{
+		var id = mongoose.Types.ObjectId(req.params.id);
+		req.app.db.models.Car.findById(id,
+		    function(err , docs)
+			{
+				if(err)
+				{
+					return next(err);
+				}
+				res.status(200).json(docs);
+			});
+	},
 	reserved : function(req , res , next)
 	{
 
