@@ -15,6 +15,7 @@ module.exports = function(app , passport)
     //car routes
     app.post('/car' ,  car.create);
     app.get('/car',  car.read);
+    app.get('/car/:id', car.single_car);
     app.put('/car/:id', car.update);
     app.delete('/car:id',  car.remove);
     app.get('/reserved',  car.reserved);
