@@ -16,7 +16,7 @@ angular.module('kizusiApp',
 .config(function($stateProvider , $urlRouterProvider , $httpProvider){
 
 	$stateProvider
-	.state('home',
+	/*.state('home',
 		    {
 		     url: '/home',
 		     templateUrl: 'templates/home.html',
@@ -38,7 +38,7 @@ angular.module('kizusiApp',
 		    {
 		     url: '/services',
 		     templateUrl: 'templates/services.html'
-		  })
+		  })*/
 	.state('login',
 		    {
 		     url: '/login',
@@ -61,5 +61,5 @@ angular.module('kizusiApp',
 	
 
 
-	$urlRouterProvider.otherwise('/home');
+	$urlRouterProvider.otherwise('/login');
 });
