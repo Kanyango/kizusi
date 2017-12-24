@@ -89,6 +89,19 @@
  </div>
 <div class="container">
 	<div class="col-md-6 col-md-offset-3">
-	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3> Car Rent Requests </h3>
+			</div>
+			<div class="panel-body">
+				<div class="well text-left" ng-repeat="request in requests">
+ 				 	<p>{{ request.cname }}</p>
+ 				 	<p>{{ request.mail }}</p>
+					<p>{{ request.phone }}</p>
+					<p>{{ request.careg }}</p>
+					<p>{{ request.natId }}</p>
+ 				 </div>
+			</div>
+		</div>
 	</div>
 </div>
