@@ -63,6 +63,14 @@ angular.module('kizusiApp.admin',
 		$scope.totalav = $scope.available.length;
 		console.log($scope.available);
 	});
+	
+	$http.get('/rent_out')
+	.then(function(res){
+
+		$scope.requests = res.data;
+		$scope.total_rent = $scope.requests.length;
+		
+	});
 
 	$http.get('/reserve')
 	.then(function(res){
