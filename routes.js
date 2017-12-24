@@ -7,11 +7,14 @@ var auth  = jwt({ secret : config.secret , userProperty: 'payload'});
 var passport = require('./passport');
 var user    = require('./server/service/users');
 var car    = require('./server/service/car');
+var rent_out    = require('./server/service/rent_out');
 var reserve   = require('./server/service/reserve');
 
 
 module.exports = function(app , passport)
 {   
+    app.post('/rent_out' ,  rent_out.create);
+    app.get('/rent_out',  rent_out.read);
     //car routes
     app.post('/car' ,  car.create);
     app.get('/car',  car.read);
