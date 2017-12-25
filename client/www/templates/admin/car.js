@@ -178,7 +178,7 @@ angular.module('kizusiApp.car', [])
 
     $scope.upload = function (file) {
         Upload.upload({
-            url: 'https://kizusiapp.herokuapp.com/upload' + id, //webAPI exposed to upload the file
+            url: 'https://kizusi.herokuapp.com/upload' + id, //webAPI exposed to upload the file
             data:{file:file} //pass file as data, should be user ng-model
         }).then(function (resp) { //upload function returns a promise
             if(resp.data.error_code === 0){ //validate success
