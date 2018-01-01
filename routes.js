@@ -34,7 +34,7 @@ module.exports = function(app , passport)
     app.post('/upload:id',  car.upload);
 
     //reserve routes
-    app.post('/reserve',  reserve.create);
+    app.post('/reserve/',  reserve.create);
     app.get('/reserve',reserve.read);
     app.put('/reserve',  reserve.update);
     app.delete('/reserve:id' , reserve.remove);
