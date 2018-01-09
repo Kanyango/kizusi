@@ -66,9 +66,10 @@ var car = {
 			status    : req.body.status,
 			capacity  : req.body.capacity,
 			fuel      : req.body.fuel,
-			engine       : req.body.eng,
-			steering     : req.body.steer,
-			drive     : req.body.drive
+			engine    : req.body.eng,
+			steering  : req.body.steer,
+			drive     : req.body.drive,
+			location  : req.body.location
 		};
 
 		var options = { new : true };
