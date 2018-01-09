@@ -42,7 +42,8 @@ var car = {
 			fuel      : req.body.fuel,
 			engine       : req.body.engine,
 			steering     : req.body.steering,
-			drive     : req.body.drive
+			drive     : req.body.drive,
+			location : req.body.location
 		};
 
 		req.app.db.models.Car.create(fieldsToSet ,
