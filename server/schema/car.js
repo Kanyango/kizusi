@@ -17,7 +17,7 @@ module.exports = function(app , mongoose){
 		drive       : {type: String},
 		steering     : {type: String},
 		photo       : {type: String},
-		location    : {type: string},
+		location    : {type: String},
 		pricing     : [{desc: String, amount: String}]	
 	});
 	app.db.model('Car' , carSchema);
