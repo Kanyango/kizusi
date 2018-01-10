@@ -15,7 +15,7 @@ module.exports = function(app , passport)
 {   
     app.post('/notifications', rent_out.not_create);
     app.get('/notifications', rent_out.not_read);
-    app.put('/notifications', rent_out.not_put);
+    app.put('/notifications/:id', rent_out.not_put);
     app.post('/rent_out' ,  rent_out.create);
     app.get('/rent_out',  rent_out.read);
     //car routes
