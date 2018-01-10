@@ -14,6 +14,7 @@ var reserve   = require('./server/service/reserve');
 module.exports = function(app , passport)
 {   
     app.post('/notifications', rent_out.not_create);
+    app.get('/notifications', rent_out.not_read);
     app.post('/rent_out' ,  rent_out.create);
     app.get('/rent_out',  rent_out.read);
     //car routes
