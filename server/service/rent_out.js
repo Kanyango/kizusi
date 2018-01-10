@@ -44,7 +44,7 @@ var rent_out = {
 	not_create: function(req, res, next)
 	{ 
 		var fieldsToSet = { 
-				    notification: req.body.notification;
+				    notification: req.body.notification
 				  };
     
 		
