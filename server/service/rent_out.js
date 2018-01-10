@@ -39,7 +39,25 @@ var rent_out = {
 				}
 				res.status(200).json(docs);
 			});
-	}
+	},
+	
+	not_create: function(req, res, next)
+	{ 
+		var fieldsToSet = { 
+				    notification: req.body.htmlContent
+				  };
+    
+		
+		req.app.db.models.Notifications.create(fieldsToSet , 
+			function(err ,  docs){
 
+				if(err)
+				{
+					return next(err);
+				}
+				res.status(200).json(docs);
+			});
+	}
+		
 }
 module.exports = rent_out;
