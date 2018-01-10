@@ -57,6 +57,19 @@ var rent_out = {
 				}
 				res.status(200).json(docs);
 			});
+	},
+	not_read: function(req, res, next)
+	{ 
+		
+		req.app.db.models.Notifications.find({} , 
+			function(err ,  docs){
+
+				if(err)
+				{
+					return next(err);
+				}
+				res.status(200).json(docs);
+			});
 	}
 		
 }
