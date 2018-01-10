@@ -70,6 +70,26 @@ var rent_out = {
 				}
 				res.status(200).json(docs);
 			});
+	},
+	not_put: function(req, res, next)
+	{ 
+		var id = req.params.id;
+		var fieldsToSet =
+		{
+			notification: req.body.notification;
+		};
+
+		var options = { new : true };
+
+		req.app.db.models.Notifications.findByIdAndUpdate(
+			mongoose.Types.ObjectId(id) , fieldsToSet ,
+			options , function(err , docs){
+				if(err)
+		    	{
+		    		return next(err);
+		    	}
+			 res.status(200).json(docs);
+			});
 	}
 		
 }
