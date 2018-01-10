@@ -76,7 +76,7 @@ var rent_out = {
 		var id = req.params.id;
 		var fieldsToSet =
 		{
-			notification: req.body.notification;
+			notification: req.body.notification
 		};
 
 		var options = { new : true };
