@@ -47,8 +47,8 @@ module.exports = function(app , passport)
     app.post('/login' , user.login);
     app.put('/login' , user.update);
     
-    app.get('/oauth/facebook' , passport.authenticate('facebook'));
-    app.get('/oauth/facebook/callback' , passport.authenticate('facebook',{
+    app.get('/auth/facebook' , passport.authenticate('facebook'));
+    app.get('/auth/facebook/callback' , passport.authenticate('facebook',{
         successRedirect : '/home',
         failureRedirect  : '/'
     }));
