@@ -8,11 +8,19 @@ var jwt = require('jsonwebtoken');
 module.exports = function(app , mongoose)
 {
 	var todoUsersSchema = new mongoose.Schema({
-    		username : {type: String , unique: true , lowercase: true},
-		email    : {type: String },
-		password : {ype: string},
-		phone    : {type: Number , unique: true},
-		timeCreated : {type: Date , default: Date.now}
+		timeCreated : {type: Date , default: Date.now},
+		facebook : {
+			       id    : String,
+			       token : String, 
+			       email : String,
+			       name  : String
+		                  },
+		twitter  : {
+			id : String,
+			token : String,
+			username  : String,
+			displayName : String
+		},
 	});	
 	/*userSchema.methods.setPassword = function(password){
 		this.salt = crypto.randomBytes(16).toString('hex');
