@@ -50,7 +50,7 @@ var TwitterStrategy  = require('passport-twitter').Strategy;
             return done(null , user);
           } else{
 
-            var newUser = new app.db.models.User();
+            var newUser = new app.db.models.ToDoUser();
 
             newUser.facebook.id    = profile.id; // set the users facebook id                   
             newUser.facebook.token = accessToken; // we will save the token that facebook provides to the user                    
