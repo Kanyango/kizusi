@@ -5,12 +5,12 @@ module.exports = function(app , mongoose){
 		
        //user       : {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 		dateCreated : {type : Date,default: Date.now()},
-		title : {type: string},
-    owner : {type: string},
+		title : {type: String},
+    owner : {type: String},
     items : [], 
-    location: {type: string},
-    start_time : {type: string},
-    end_time : {type: string} 
+    location: {type: String},
+    start_time : {type: String},
+    end_time : {type: String} 
   });
 	app.db.model('ToDoList' , todolistSchema);
   };
