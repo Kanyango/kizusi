@@ -46,6 +46,17 @@ module.exports = function(app , passport)
     app.post('/session/create' , user.create);
     app.post('/login' , user.login);
     app.put('/login' , user.update);
+    
+   app.get(base+'/oauth/facebook' , passport.authenticate('facebook'));
+   app.get('/oauth/facebook/callback' , passport.authenticate('facebook',{
+        successRedirect : '/home',
+        failureRedirect  : '/'
+    }));
+    app.get('/auth/twitter' , passport.authenticate('twitter'));
+    app.get('/auth/twitter/callback' , passport.authenticate('twitter',{
+    	successRedirect : '/home',
+    	failureRedirect  : '/'
+    }));
 
     app.get('/logout' , function(req , res){
         	req.logout();
