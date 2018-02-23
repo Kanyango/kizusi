@@ -13,7 +13,7 @@ exports.oauth = {
 
 	'facebook' :{
 
-		'clientID'    : '1091247900936084',
+		'clientID'    : '166280357355680',
 		'clientSecret': '941a60d3455544c0aa1ffbae17d3d95d',
 		'callbackURL' : 'https://kizusapp.herokuapp.com/plan/'
 		//'callbackURL' : 'http://localhost:7000/oauth/facebook/callback'
