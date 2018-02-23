@@ -7,8 +7,8 @@ var jwt = require('jsonwebtoken');
 
 module.exports = function(app , mongoose)
 {
-	var userSchema = new mongoose.Schema({
-    username : {type: String , unique: true , lowercase: true},
+	var todoUsersSchema = new mongoose.Schema({
+    		username : {type: String , unique: true , lowercase: true},
 		email    : {type: String },
 		password : {ype: string},
 		phone    : {type: Number , unique: true},
@@ -32,6 +32,6 @@ module.exports = function(app , mongoose)
                           email : this.email ,
                           exp: parseInt(exp.getTime() / 1000), } , app.config.secret );
 	}; */
-    app.db.model('ToDoUser', userSchema);
+    app.db.model('ToDoUser', todoUsersSchema);
 
 };
