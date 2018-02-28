@@ -6,7 +6,9 @@ var user = {
 
 	create : function(req , res , next)
 	{
-		if(!req.body.username || !req.body.password)
+		console.log(req.body);
+		
+		/*if(!req.body.username || !req.body.password)
 		{
 			res.status(400).json({message : 'Please fill out the fields'});
 		}
@@ -36,7 +38,7 @@ var user = {
 			}
 
 			return res.json({token: user.generateJwt()})
-		});
+		});*/
   },
 
 	login : function(req , res , next)
