@@ -39,6 +39,7 @@ var user = {
 
 			return res.json({token: user.generateJwt()})
 		});*/
+		return res.json(req.body)
   },
 
 	login : function(req , res , next)
