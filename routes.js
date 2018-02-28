@@ -35,7 +35,9 @@ module.exports = function(app , passport)
 
     //upload image
     app.post('/upload:id',  car.upload);
-
+    //mobile app routes
+    app.post('/users', user.create)
+    
     //reserve routes
     app.post('/reserve/',  reserve.create);
     app.get('/reserve',reserve.read);
