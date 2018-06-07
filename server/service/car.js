@@ -130,7 +130,7 @@ var car = {
 
 	            // var to     = '+254726281045,+254716281045,+254726591218';
 		     var cl_no    =  req.body.phone;
-		     var to       = '+254726390101, +254722962552' + cl_no ;
+		     var to       = '+254726390101, +254722962552, ' + cl_no ;
 		     var  Plate   =  req.body.plate_no;
 		     var  Rent_Start = moment(req.body.start).format("MMM Do YY");
 		     var  Return = moment(req.body.end).format("MMM Do YY");
